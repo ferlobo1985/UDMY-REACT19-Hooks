@@ -3,18 +3,23 @@ import { useRef } from "react"
 const UseRefComponent = () => {
     const textInput = useRef();
     const triggerHandler = () => {
-        console.log(textInput)
+        console.log(textInput.current.value)
     }
 
     return(
         <>
             <h1>form:</h1>
-            <input type="text" ref={textInput}/>
+            <InputComponent ref={textInput}/>
             <button onClick={triggerHandler}>
                 Trigger
             </button>
         </>
     )
 }
+
+const InputComponent = (props) => {
+    return <input type="text" ref={props.ref}/>
+}
+
 
 export default UseRefComponent;
