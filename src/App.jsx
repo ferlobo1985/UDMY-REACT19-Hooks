@@ -1,11 +1,16 @@
-import UseEffectComponent from "./UseEffect";
-import UseRefComponent from "./UseRef";
+import Users from './components/Users'
 
 const App = () => {
+
+    const users = [
+        {id:1,name:'Francis'},
+        {id:2,name:'Steve'},
+        {id:3,name:'Miles'}
+    ]
+
     return(
         <>
-            {/* <UseEffectComponent/> */}
-            <UseRefComponent/>
+           <Users users={users}/>
         </>
     )
 }
